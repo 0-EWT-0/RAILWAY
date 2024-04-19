@@ -21,7 +21,10 @@ const server = createServer(app);
 // Configuración del servidor WebSocket
 const io = new WebsocketServer(server, {
   cors: {
-    origin: '*',  // Ajusta esto según tus necesidades de seguridad
+    origin: "https://railway-production-2a8c.up.railway.app",
+    methods: ["GET", "POST"],
+    allowedHeaders: '*',  // Permitiendo un encabezado personalizado
+    credentials: true
   },
 });
 
